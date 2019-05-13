@@ -2,6 +2,7 @@ package core.selenium;
 
 import core.selenium.webDrivers.Browser;
 import core.selenium.webDrivers.BrowserFactory;
+import core.utils.PropertyAccessor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,6 +20,7 @@ public class WebDriverManager {
     private WebDriver webDriver;
     private WebDriverWait webDriverWait;
     private BrowserFactory browsers;
+    private PropertyAccessor properties;
 
     private static WebDriverManager instance = null;
 
@@ -46,7 +48,8 @@ public class WebDriverManager {
      */
     private void initialize() {
         browsers = new BrowserFactory();
-        Browser firefox = browsers.getBrowser("Firefox");
+        String nameBrowser = properties.getInstance("gradle.properties").getProperty("browser");
+        Browser firefox = browsers.getBrowser(nameBrowser);
         this.webDriver = firefox.initDriver();
         this.webDriver.manage().window().maximize();
         this.webDriver.manage()
