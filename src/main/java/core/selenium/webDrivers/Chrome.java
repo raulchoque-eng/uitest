@@ -15,12 +15,13 @@ import java.util.HashMap;
  * @author raulchoque
  * @version 0.0.1
  */
-public class Chrome {
+public class Chrome implements Browser {
 
     /**
      * Initializes Chrome driver.
      * @return A new ChromeDriver.
      */
+    @Override
     public WebDriver initDriver() {
         ChromeDriverManager.getInstance().version("74.0.3729.6").setup();
 
