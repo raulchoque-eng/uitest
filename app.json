@@ -1,0 +1,20 @@
+{
+  "baseURL" : {
+    "protocol" : "https://",
+    "domain" : "www.pivotaltracker.com/"
+  },
+  "users" : [
+    {
+      "admin" : {
+        "username" : "yfert_0209@hotmail.com",
+        "password" : "r6412018C"
+      }
+    },
+    {
+      "invited": {
+        "username": "uitesting@outlook.com",
+        "password": "r6412018C"
+      }
+    }
+  ]
+}

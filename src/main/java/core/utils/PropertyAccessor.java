@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Firefox class
+ * PropertyAccessor class
  *
  * @author raulchoque
  * @version 0.0.1
