@@ -1,6 +1,7 @@
 package pivotal.ui.pages;
 
 import core.selenium.WebDriverManager;
+import core.utils.AppJsonAccessor;
 import org.openqa.selenium.WebDriver;
 
 import java.net.MalformedURLException;
@@ -11,7 +12,7 @@ import java.net.URL;
  */
 public class PageTransporter {
 
-    private String baseURL =   "https://www.";
+    private String baseURL =  AppJsonAccessor.getInstance().getBaseURL();
     private WebDriver webDriver;
 
     private static PageTransporter instance;
@@ -64,4 +65,12 @@ public class PageTransporter {
         return new GooglePage();
     }
 
+    /**
+     * Navigates to PivotalTracker Page.
+     *
+     */
+    public AppPage navigatePivotalTrackerPage() {
+       goToURL(baseURL);
+       return new AppPage();
+    }
 }
