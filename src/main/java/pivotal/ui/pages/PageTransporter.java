@@ -57,15 +57,6 @@ public class PageTransporter {
     }
 
     /**
-     * Navigates to Google Page.
-     *
-     */
-    public GooglePage navigateGooglePageTest() {
-        goToURL(baseURL.concat("google.com/"));
-        return new GooglePage();
-    }
-
-    /**
      * Navigates to PivotalTracker Page.
      *
      */

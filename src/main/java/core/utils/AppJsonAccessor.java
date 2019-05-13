@@ -29,12 +29,10 @@ public class AppJsonAccessor {
             JsonObject jsonObject = jsonElement.getAsJsonObject();
             baseURL = jsonObject.getAsJsonObject("baseURL");
             account  = jsonObject.getAsJsonArray("users");
-            System.out.println(baseURL);
-            System.out.println(account);
-        } catch (FileNotFoundException e) {
-
+        } catch (FileNotFoundException fe) {
+            throw new RuntimeException(fe);
         } catch (IOException ioe){
-
+            throw new RuntimeException(ioe);
         }
     }
 

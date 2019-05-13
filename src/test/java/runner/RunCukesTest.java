@@ -4,11 +4,9 @@ import core.selenium.WebDriverManager;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.AfterTest;
+
 /**
- * RunCukesTest class
- *
- * @author raulchoque
- * @version 0.0.1
+ * Created by Yesica on 06/05/2019.
  */
 @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
