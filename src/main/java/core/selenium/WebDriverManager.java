@@ -2,8 +2,6 @@ package core.selenium;
 
 import core.selenium.webDrivers.Browser;
 import core.selenium.webDrivers.BrowserFactory;
-import core.selenium.webDrivers.Chrome;
-import core.selenium.webDrivers.Firefox;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
