@@ -8,7 +8,6 @@ package core.selenium.webDrivers;
  */
 public class BrowserFactory {
 
-
     public Browser getBrowser(String nameBrowser) {
 
         Browser browser;
