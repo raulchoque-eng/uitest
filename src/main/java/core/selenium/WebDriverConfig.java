@@ -1,5 +1,8 @@
 package core.selenium;
 
+import core.utils.PropertyGradle;
+import core.utils.PropertyWebDriver;
+
 /**
  * WebDriverConfig class
  *
@@ -17,6 +20,13 @@ public class WebDriverConfig {
     private static WebDriverConfig instance;
 
     /**
+     * Constructor of page WebDriverConfig.
+     */
+    private WebDriverConfig() {
+        initialize();
+    }
+
+    /**
      * Constructor of WebDriverConfig.
      * Gets WebDriverConfig as Singleton.
      *
@@ -32,11 +42,12 @@ public class WebDriverConfig {
     /**
      * Initializes WebDriverConfig.
      */
-    public void initialize() {
+    private void initialize() {
         browser = System.getProperty(BROWSER);  //Get the browser system property
-        implicitWaitTime = 30;
-        explicitWaitTime = 40;
-        waitSleepTime = 500;
+        PropertyWebDriver propertyWebDriver = PropertyWebDriver.getInstance();
+        implicitWaitTime = Integer.parseInt(propertyWebDriver.getImplicitWaitTime());
+        explicitWaitTime = Integer.parseInt(propertyWebDriver.getExplicitWaitTime());
+        waitSleepTime = Integer.parseInt(propertyWebDriver.getWaitSleepTime());
     }
 
     /**
