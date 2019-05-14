@@ -35,9 +35,7 @@ public class PropertyWebDriver {
         return propertyWebDriver;
     }
 
-    public String getImplicitWaitTime() {
-        return properties.getProperty("implicitWaitTime");
-    }
+    public String getImplicitWaitTime() { return properties.getProperty("implicitWaitTime"); }
     public String getExplicitWaitTime() { return properties.getProperty("explicitWaitTime"); }
-    public String getWaitSleepTime() { return properties.getProperty("explicitWaitTime"); }
+    public String getWaitSleepTime() { return properties.getProperty("waitSleepTime"); }
 }

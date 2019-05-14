@@ -45,13 +45,9 @@ public class WebDriverConfig {
     private void initialize() {
         browser = System.getProperty(BROWSER);  //Get the browser system property
         PropertyWebDriver propertyWebDriver = PropertyWebDriver.getInstance();
-        System.out.println("inplicit value: " + propertyWebDriver.getImplicitWaitTime());
         implicitWaitTime = Integer.parseInt(propertyWebDriver.getImplicitWaitTime());
         explicitWaitTime = Integer.parseInt(propertyWebDriver.getExplicitWaitTime());
         waitSleepTime = Integer.parseInt(propertyWebDriver.getWaitSleepTime());
-//        implicitWaitTime = 30;
-//        explicitWaitTime = 40;
-//        waitSleepTime = 500;
     }
 
     /**
