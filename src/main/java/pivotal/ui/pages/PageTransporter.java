@@ -64,4 +64,9 @@ public class PageTransporter {
        goToURL(baseURL);
        return new AppPage();
     }
+
+    public LoginPage navigateToLoginPage() {
+        goToURL(baseURL.concat("signin"));
+        return new LoginPage();
+    }
 }

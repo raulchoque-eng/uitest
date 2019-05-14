@@ -43,6 +43,30 @@ public class AppJsonAccessor {
         return appJsonAccessor;
     }
 
+    public String getUsername() {
+        JsonObject admin = searchAdminAccount("admin");
+        return admin.get("username").getAsString();
+    }
+
+    public String getPassword() {
+        JsonObject admin = searchAdminAccount("admin");
+        return admin.get("password").getAsString();
+    }
+
+    private JsonObject searchAdminAccount(String nameAccount) {
+
+        JsonObject userAccount = new JsonObject();
+        for (Object object: account) {
+            JsonObject dataAccount = (JsonObject) object;
+
+            if (dataAccount.has(nameAccount)) {
+                userAccount = dataAccount.get("admin").getAsJsonObject();
+                break;
+            }
+        }
+        return userAccount;
+    }
+
     public String getBaseURL() {
         String protocol = baseURL.get("protocol").getAsString();
         String domain = baseURL.get("domain").getAsString();

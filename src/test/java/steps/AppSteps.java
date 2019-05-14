@@ -29,7 +29,6 @@ public class AppSteps {
         appPage = pageTransporter.navigatePivotalTrackerPage();
     }
 
-    @Test
     @Given("^I have a Project with name \"([^\"]*)\"$")
     public void createProjectForAPI(String nameProject) {
 
@@ -45,8 +44,6 @@ public class AppSteps {
         then().
             assertThat().
             statusCode(200).
-            log().
-            body().
         and().
             contentType(JSON);
     }
