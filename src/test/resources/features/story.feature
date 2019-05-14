@@ -6,3 +6,4 @@ Feature: Story manages.
 
   Scenario: I should be able to create a new Story
     Given   I go to app web page
+    And     I have a Project with name "Project to add a Story"
