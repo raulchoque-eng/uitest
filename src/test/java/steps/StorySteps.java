@@ -4,7 +4,6 @@ import cucumber.api.java.en.When;
 import pivotal.entities.Story;
 import pivotal.ui.pages.StoryForm;
 
-import java.util.List;
 import java.util.Map;
 
 public class StorySteps {
@@ -18,13 +17,15 @@ public class StorySteps {
     }
 
     @When("^I add a new Story with the following data$")
-    public void openStoryForm(List<Map<String,String>> stories) {
-        // Populate entity information
-//        story = storyList.get(0);
-//
-//        // Create StorySteps by UI
-//        storyForm.createStory(story);
+    public void openStoryForm(Map<String,String> newStory) {
 
-        storyForm.createStory();
+        story.setName(newStory.get("name_Story"));
+        System.out.println("test:" + story.getName());
+        story.setDescription(newStory.get("description_Story"));
+        System.out.println(story.getDescription());
+        story.setTask(newStory.get("task_Story"));
+        story.setActivity(newStory.get("activity_Story"));
+
+        storyForm.createStory(story);
     }
 }

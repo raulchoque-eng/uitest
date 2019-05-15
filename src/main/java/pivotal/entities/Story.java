@@ -1,6 +1,7 @@
 package pivotal.entities;
 
 import java.security.PrivateKey;
+import java.util.Map;
 
 public class Story {
     private String name;

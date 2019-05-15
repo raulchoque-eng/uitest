@@ -11,5 +11,9 @@ Feature: Story manages.
     When    I open the Project from Project Dashboard page
     And     I open the Story form from Current Operation and Backlog panel in the Project page
     And     I add a new Story with the following data
-      | name_Story     | blocker_story | description_story | label_story | task_story | Activity_story |
-      | New Story test | none           | text description  | none         | first task  | text activity  |
+      |name_Story        | New Story test    |
+      |blocker_Story     | none              |
+      |description_Story | text description  |
+      |label_Story       | none              |
+      |task_Story        | activity_story    |
+      |activity_Story    | text activity     |
