@@ -17,3 +17,4 @@ Feature: Story manages.
       |label_Story       | none              |
       |task_Story        | activity_story    |
       |activity_Story    | text activity     |
+    Then    the name of new Story should be displayed on Current Operation and Backlog panel in the Project page

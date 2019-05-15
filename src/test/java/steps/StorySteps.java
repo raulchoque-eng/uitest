@@ -1,8 +1,10 @@
 package steps;
 
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pivotal.entities.Story;
 import pivotal.ui.pages.StoryForm;
+import static org.testng.Assert.assertEquals;
 
 import java.util.Map;
 
@@ -20,12 +22,15 @@ public class StorySteps {
     public void openStoryForm(Map<String,String> newStory) {
 
         story.setName(newStory.get("name_Story"));
-        System.out.println("test:" + story.getName());
         story.setDescription(newStory.get("description_Story"));
-        System.out.println(story.getDescription());
         story.setTask(newStory.get("task_Story"));
         story.setActivity(newStory.get("activity_Story"));
 
         storyForm.createStory(story);
+    }
+
+    @Then("^the name of new Story should be displayed on Current Operation and Backlog panel in the Project page$")
+    public void validateNameNewStory() {
+        assertEquals( story.getName(), storyForm.getNameStory());
     }
 }

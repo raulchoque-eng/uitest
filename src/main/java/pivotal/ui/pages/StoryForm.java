@@ -36,6 +36,10 @@ public class StoryForm extends BasePage{
     @FindBy(xpath = "//div[starts-with(@id,'panel_backlog')]//textarea[starts-with(@id,'comment-edit-')]")
     WebElement activityStory;
 
+    @FindBy(xpath = "//div[starts-with(@id,'panel_backlog')]//div[@class='container droppable tn-panelWrapper___fTILOVmk']//div[@class='tn-panel__loom']//span[contains(text(), \"New Story test\")]")
+    WebElement nameNewStory;
+
+
     @Override
     public void waitUntilPageObjectIsLoaded() {
         wait.until(ExpectedConditions.visibilityOf(storyForm));
@@ -48,7 +52,10 @@ public class StoryForm extends BasePage{
         openDescriptionStoryAreatext.click();
         descriptionStory.sendKeys(story.getDescription());
         saveBtn.click();
+    }
 
+    public String getNameStory() {
+        return nameNewStory.getText();
     }
 
 }
