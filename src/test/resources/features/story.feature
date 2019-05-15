@@ -10,3 +10,6 @@ Feature: Story manages.
     And     I log in with a valid password and username
     When    I open the Project from Project Dashboard page
     And     I open the Story form from Current Operation and Backlog panel in the Project page
+    And     I add a new Story with the following data
+      | name_Story     | blocker_story | description_story | label_story | task_story | Activity_story |
+      | New Story test | none           | text description  | none         | first task  | text activity  |
