@@ -8,6 +8,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * AppPage class
+ *
+ * @author raulchoque
+ * @version 0.0.1
+ */
 public class GenerateReport {
     public static void generateMasterReport() {
         File reportOutputDirectory = new File("target");

@@ -8,6 +8,12 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.Map;
 
+/**
+ * AppPage class
+ *
+ * @author raulchoque
+ * @version 0.0.1
+ */
 public class StorySteps {
 
     StoryForm storyForm = new StoryForm();

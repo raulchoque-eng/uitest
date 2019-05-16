@@ -5,8 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pivotal.entities.Story;
 
-import javax.xml.xpath.XPath;
-
+/**
+ * AppPage class
+ *
+ * @author raulchoque
+ * @version 0.0.1
+ */
 public class StoryForm extends BasePage{
 
     @FindBy(xpath = "//div[starts-with(@id,'panel_backlog')]//div[@class='container droppable tn-panelWrapper___fTILOVmk']")

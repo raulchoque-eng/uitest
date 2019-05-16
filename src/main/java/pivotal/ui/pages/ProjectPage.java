@@ -4,6 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+/**
+ * AppPage class
+ *
+ * @author raulchoque
+ * @version 0.0.1
+ */
 public class ProjectPage extends BasePage {
 
     @FindBy(css = "div.projectPaneSection")
