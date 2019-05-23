@@ -1,4 +1,4 @@
-Feature: Story manages.
+﻿Feature: Story manages.
 
   A story (called a “user story” by some practitioners) in Tracker is a short description
   of functionality or an incremental piece of capability that is of value to the customer
@@ -18,3 +18,5 @@ Feature: Story manages.
       |task_Story        | activity_story    |
       |activity_Story    | text activity     |
     Then    the name of new Story should be displayed on Current Operation and Backlog panel in the Project page
+
+

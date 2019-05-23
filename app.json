@@ -1,7 +1,7 @@
 {
   "baseURL" : {
     "protocol" : "https://",
-    "domain" : "www.pivotaltracker.com/"
+    "domain" : "login.salesforce.com/"
   },
   "users" : [
     {

@@ -14,9 +14,11 @@ public class AppPage extends BasePage {
 
     @FindBy(css = "header.header__container")
     WebElement pivotalTrackerHeader;
+    @FindBy(id = "wrapper")
+    WebElement testPnl;
 
     @Override
     public void waitUntilPageObjectIsLoaded() {
-        wait.until(ExpectedConditions.visibilityOf(pivotalTrackerHeader));
+        wait.until(ExpectedConditions.visibilityOf(testPnl));
     }
 }
